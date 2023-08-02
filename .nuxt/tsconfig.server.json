@@ -1,0 +1,64 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "/Users/ivana/projects/fem/interactive-details-form/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "/Users/ivana/projects/fem/interactive-details-form/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "/Users/ivana/projects/fem/interactive-details-form"
+      ],
+      "~/*": [
+        "/Users/ivana/projects/fem/interactive-details-form/*"
+      ],
+      "@": [
+        "/Users/ivana/projects/fem/interactive-details-form"
+      ],
+      "@/*": [
+        "/Users/ivana/projects/fem/interactive-details-form/*"
+      ],
+      "~~": [
+        "/Users/ivana/projects/fem/interactive-details-form"
+      ],
+      "~~/*": [
+        "/Users/ivana/projects/fem/interactive-details-form/*"
+      ],
+      "@@": [
+        "/Users/ivana/projects/fem/interactive-details-form"
+      ],
+      "@@/*": [
+        "/Users/ivana/projects/fem/interactive-details-form/*"
+      ],
+      "assets": [
+        "/Users/ivana/projects/fem/interactive-details-form/assets"
+      ],
+      "assets/*": [
+        "/Users/ivana/projects/fem/interactive-details-form/assets/*"
+      ],
+      "public": [
+        "/Users/ivana/projects/fem/interactive-details-form/public"
+      ],
+      "public/*": [
+        "/Users/ivana/projects/fem/interactive-details-form/public/*"
+      ]
+    }
+  },
+  "include": [
+    "/Users/ivana/projects/fem/interactive-details-form/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}
