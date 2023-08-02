@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+/* html,
+body,
+#__nuxt,
+main {
+    height: 100%;
+} */
+
+h1,
+h2 {
+    line-height: var(--line-height-heading);
+}
+
+body {
+    scroll-behavior: smooth;
+    line-height: var(--line-height-base);
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
