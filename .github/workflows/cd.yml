@@ -1,33 +1,34 @@
 name: cd
-
-on: [push, pull_request]
-
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
 jobs:
-  cd:
-    runs-on: ${{ matrix.os }}
-
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
+        node-version: [18]
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
+    - name: Checkout 🛎️
+      uses: actions/checkout@v3
 
-      - name: Setup node env
-        uses: actions/setup-node@v2.1.2
-        with:
-          node-version: ${{ matrix.node }}
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
-        run: yarn
+    - name: Install & Generate 🔧
+      run: |
+        npm ci
+        npm run generate
+      env:
+        NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
 
-      - name: Generate
-        run: yarn generate
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+    - name: Deploy 🚀
+      uses: SparicI/interactive-details-form@v1
+      with:
+        folder: dist
