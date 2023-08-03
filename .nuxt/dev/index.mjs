@@ -112,7 +112,7 @@ const appConfig = defuFn(inlineAppConfig);
 
 const _inlineRuntimeConfig = {
   "app": {
-    "baseURL": "/",
+    "baseURL": "/interactive-details-form/",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
