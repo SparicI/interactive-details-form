@@ -4,7 +4,7 @@
     <section class="cards-section">
       <div>
         <img
-          src="./assets/images/bg-card-back.png"
+          src="/bg-card-back.png"
           alt="Card back"
           class="card__back"
         >
@@ -15,13 +15,13 @@
 
       <div>
         <img
-          src="./assets/images/bg-card-front.png"
+          src="/bg-card-front.png"
           alt="Card Front"
           class="card__front"
         >
         <div class="card__wrapper">
           <img
-            src="./assets/images/card-logo.svg"
+            src="/card-logo.svg"
             alt="Card logo"
             class="card__logo"
           >
@@ -61,7 +61,7 @@ const data = useState('form')
   min-height: 235px;
   position: relative;
 
-  background-image: url('./assets/images/bg-main-mobile.png');
+  background-image: url('/bg-main-mobile.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -123,7 +123,7 @@ const data = useState('form')
 
   .cards-section {
     flex: 1;
-    background-image: url('./assets/images/bg-main-desktop.png');
+    background-image: url('/bg-main-desktop.png');
   }
 
 

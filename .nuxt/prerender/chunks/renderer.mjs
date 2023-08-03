@@ -303,5 +303,5 @@ const renderer$1 = /*#__PURE__*/Object.freeze({
   default: renderer
 });
 
-export { buildAssetsURL as b, renderer$1 as r };
+export { publicAssetsURL as p, renderer$1 as r };
 //# sourceMappingURL=renderer.mjs.map

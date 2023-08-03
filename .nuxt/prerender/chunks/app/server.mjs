@@ -648,9 +648,9 @@ _sfc_main$3.setup = (props, ctx) => {
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
 const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-bfb34fc5"]]);
-const _imports_0 = "" + __buildAssetsURL("bg-card-back.503939c0.png");
-const _imports_1 = "" + __buildAssetsURL("bg-card-front.5aca8db4.png");
-const _imports_2 = "" + __buildAssetsURL("card-logo.c6566e76.svg");
+const _imports_0 = "" + __publicAssetsURL("bg-card-back.png");
+const _imports_1 = "" + __publicAssetsURL("bg-card-front.png");
+const _imports_2 = "" + __publicAssetsURL("card-logo.svg");
 const _sfc_main$2 = {
   __name: "app",
   __ssrInlineRender: true,
@@ -659,7 +659,7 @@ const _sfc_main$2 = {
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j;
       const _component_BaseForm = __nuxt_component_0;
-      _push(`<main${ssrRenderAttrs(_attrs)} data-v-4ad9e6c7><h1 class="visually-hidden" data-v-4ad9e6c7>Credit card form</h1><section class="cards-section" data-v-4ad9e6c7><div data-v-4ad9e6c7><img${ssrRenderAttr("src", _imports_0)} alt="Card back" class="card__back" data-v-4ad9e6c7><p class="card__data card__data--cvc" data-v-4ad9e6c7>${ssrInterpolate(((_a = unref(data)) == null ? void 0 : _a.cvc) === "" ? "000" : (_b = unref(data)) == null ? void 0 : _b.cvc)}</p></div><div data-v-4ad9e6c7><img${ssrRenderAttr("src", _imports_1)} alt="Card Front" class="card__front" data-v-4ad9e6c7><div class="card__wrapper" data-v-4ad9e6c7><img${ssrRenderAttr("src", _imports_2)} alt="Card logo" class="card__logo" data-v-4ad9e6c7><div data-v-4ad9e6c7><p class="card__data font-size-500" data-v-4ad9e6c7>${ssrInterpolate(((_c = unref(data)) == null ? void 0 : _c.cardNumber) === "" ? "0000 0000 0000 0000" : (_d = unref(data)) == null ? void 0 : _d.cardNumber)}</p><div class="flex-row margin-block-start-300 justify-content-space-between" data-v-4ad9e6c7><p class="card__data text-transform-uppercase" data-v-4ad9e6c7>${ssrInterpolate(((_e = unref(data)) == null ? void 0 : _e.cardholderName) === "" ? "Jane Appleseed" : (_f = unref(data)) == null ? void 0 : _f.cardholderName)}</p><p class="card__data" data-v-4ad9e6c7>${ssrInterpolate(((_g = unref(data)) == null ? void 0 : _g.month) === "" ? "00" : (_h = unref(data)) == null ? void 0 : _h.month)}/${ssrInterpolate(((_i = unref(data)) == null ? void 0 : _i.year) === "" ? "00" : (_j = unref(data)) == null ? void 0 : _j.year)}</p></div></div></div></div></section><section class="form-section" data-v-4ad9e6c7>`);
+      _push(`<main${ssrRenderAttrs(_attrs)} data-v-7ee2ee37><h1 class="visually-hidden" data-v-7ee2ee37>Credit card form</h1><section class="cards-section" data-v-7ee2ee37><div data-v-7ee2ee37><img${ssrRenderAttr("src", _imports_0)} alt="Card back" class="card__back" data-v-7ee2ee37><p class="card__data card__data--cvc" data-v-7ee2ee37>${ssrInterpolate(((_a = unref(data)) == null ? void 0 : _a.cvc) === "" ? "000" : (_b = unref(data)) == null ? void 0 : _b.cvc)}</p></div><div data-v-7ee2ee37><img${ssrRenderAttr("src", _imports_1)} alt="Card Front" class="card__front" data-v-7ee2ee37><div class="card__wrapper" data-v-7ee2ee37><img${ssrRenderAttr("src", _imports_2)} alt="Card logo" class="card__logo" data-v-7ee2ee37><div data-v-7ee2ee37><p class="card__data font-size-500" data-v-7ee2ee37>${ssrInterpolate(((_c = unref(data)) == null ? void 0 : _c.cardNumber) === "" ? "0000 0000 0000 0000" : (_d = unref(data)) == null ? void 0 : _d.cardNumber)}</p><div class="flex-row margin-block-start-300 justify-content-space-between" data-v-7ee2ee37><p class="card__data text-transform-uppercase" data-v-7ee2ee37>${ssrInterpolate(((_e = unref(data)) == null ? void 0 : _e.cardholderName) === "" ? "Jane Appleseed" : (_f = unref(data)) == null ? void 0 : _f.cardholderName)}</p><p class="card__data" data-v-7ee2ee37>${ssrInterpolate(((_g = unref(data)) == null ? void 0 : _g.month) === "" ? "00" : (_h = unref(data)) == null ? void 0 : _h.month)}/${ssrInterpolate(((_i = unref(data)) == null ? void 0 : _i.year) === "" ? "00" : (_j = unref(data)) == null ? void 0 : _j.year)}</p></div></div></div></div></section><section class="form-section" data-v-7ee2ee37>`);
       _push(ssrRenderComponent(_component_BaseForm, null, null, _parent));
       _push(`</section></main>`);
     };
@@ -671,7 +671,7 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("app.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const AppComponent = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-4ad9e6c7"]]);
+const AppComponent = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-7ee2ee37"]]);
 const _sfc_main$1 = {
   __name: "nuxt-error-page",
   __ssrInlineRender: true,

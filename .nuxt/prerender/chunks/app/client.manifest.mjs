@@ -1,34 +1,4 @@
 const client_manifest = {
-  "assets/images/bg-card-back.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "bg-card-back.503939c0.png",
-    "src": "assets/images/bg-card-back.png"
-  },
-  "assets/images/bg-card-front.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "bg-card-front.5aca8db4.png",
-    "src": "assets/images/bg-card-front.png"
-  },
-  "assets/images/bg-main-desktop.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "bg-main-desktop.8bf4510a.png",
-    "src": "assets/images/bg-main-desktop.png"
-  },
-  "assets/images/bg-main-mobile.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "bg-main-mobile.9e839c55.png",
-    "src": "assets/images/bg-main-mobile.png"
-  },
-  "assets/images/card-logo.svg": {
-    "resourceType": "image",
-    "mimeType": "image/svg+xml",
-    "file": "card-logo.c6566e76.svg",
-    "src": "assets/images/card-logo.svg"
-  },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.css": {
     "resourceType": "style",
     "file": "error-404.23f2309d.css",
@@ -38,7 +8,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.f7a87e28.js",
+    "file": "error-404.517c5895.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -58,7 +28,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.2f9ad419.js",
+    "file": "error-500.e485a183.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -71,59 +41,27 @@ const client_manifest = {
   },
   "node_modules/nuxt/dist/app/entry.css": {
     "resourceType": "style",
-    "file": "entry.f440c05a.css",
+    "file": "entry.ad0fd784.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   },
   "node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
-    "assets": [
-      "bg-card-back.503939c0.png",
-      "bg-card-front.5aca8db4.png",
-      "card-logo.c6566e76.svg",
-      "bg-main-mobile.9e839c55.png",
-      "bg-main-desktop.8bf4510a.png"
-    ],
     "css": [
-      "entry.f440c05a.css"
+      "entry.ad0fd784.css"
     ],
     "dynamicImports": [
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.ceec61ca.js",
+    "file": "entry.1d7b074e.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
   },
-  "entry.f440c05a.css": {
-    "file": "entry.f440c05a.css",
+  "entry.ad0fd784.css": {
+    "file": "entry.ad0fd784.css",
     "resourceType": "style"
-  },
-  "bg-card-back.503939c0.png": {
-    "file": "bg-card-back.503939c0.png",
-    "resourceType": "image",
-    "mimeType": "image/png"
-  },
-  "bg-card-front.5aca8db4.png": {
-    "file": "bg-card-front.5aca8db4.png",
-    "resourceType": "image",
-    "mimeType": "image/png"
-  },
-  "card-logo.c6566e76.svg": {
-    "file": "card-logo.c6566e76.svg",
-    "resourceType": "image",
-    "mimeType": "image/svg+xml"
-  },
-  "bg-main-mobile.9e839c55.png": {
-    "file": "bg-main-mobile.9e839c55.png",
-    "resourceType": "image",
-    "mimeType": "image/png"
-  },
-  "bg-main-desktop.8bf4510a.png": {
-    "file": "bg-main-desktop.8bf4510a.png",
-    "resourceType": "image",
-    "mimeType": "image/png"
   }
 };
 
