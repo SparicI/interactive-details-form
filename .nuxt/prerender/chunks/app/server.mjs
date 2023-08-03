@@ -1,4 +1,4 @@
-import { version, hasInjectionContext, getCurrentInstance, inject, ref, watchEffect, watch, useSSRContext, createApp, reactive, unref, mergeProps, toRef, isRef, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, h, isReadonly, defineAsyncComponent, isShallow, isReactive, toRaw } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/vue/index.mjs';
+import { version, hasInjectionContext, getCurrentInstance, inject, ref, watchEffect, watch, useSSRContext, createApp, reactive, unref, mergeProps, toRef, isRef, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, h, isReadonly, defineComponent, createElementBlock, defineAsyncComponent, isShallow, isReactive, toRaw } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/vue/index.mjs';
 import { $fetch } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/ofetch/dist/node.mjs';
 import { createHooks } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/hookable/dist/index.mjs';
 import { getContext } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/unctx/dist/index.mjs';
@@ -7,7 +7,7 @@ import { createError as createError$1, sanitizeStatusCode } from 'file:///Users/
 import { renderSSRHead } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/@unhead/ssr/dist/index.mjs';
 import { getActiveHead, createServerHead as createServerHead$1 } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/unhead/dist/index.mjs';
 import { defineHeadPlugin } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/@unhead/shared/dist/index.mjs';
-import { ssrRenderAttrs, ssrRenderAttr, ssrInterpolate, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/vue/server-renderer/index.mjs';
+import { ssrRenderAttrs, ssrRenderAttr, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/vue/server-renderer/index.mjs';
 import { a as useRuntimeConfig$1 } from '../nitro/nitro-prerenderer.mjs';
 import 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/node-fetch-native/dist/polyfill.mjs';
 import 'file:///Users/ivana/projects/fem/interactive-details-form/node_modules/destr/dist/index.mjs';
@@ -618,6 +618,28 @@ const plugins = [
   components_plugin_KR1HBZs4kY,
   unhead_KgADcZ0jPj
 ];
+const __nuxt_component_0 = /* @__PURE__ */ defineComponent({
+  name: "ClientOnly",
+  inheritAttrs: false,
+  // eslint-disable-next-line vue/require-prop-types
+  props: ["fallback", "placeholder", "placeholderTag", "fallbackTag"],
+  setup(_, { slots, attrs }) {
+    const mounted = ref(false);
+    return (props) => {
+      var _a;
+      if (mounted.value) {
+        return (_a = slots.default) == null ? void 0 : _a.call(slots);
+      }
+      const slot = slots.fallback || slots.placeholder;
+      if (slot) {
+        return slot();
+      }
+      const fallbackStr = props.fallback || props.placeholder || "";
+      const fallbackTag = props.fallbackTag || props.placeholderTag || "span";
+      return createElementBlock(fallbackTag, attrs, fallbackStr);
+    };
+  }
+});
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -647,7 +669,7 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/BaseForm.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-bfb34fc5"]]);
+const __nuxt_component_1 = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-bfb34fc5"]]);
 const _imports_0 = "" + __publicAssetsURL("bg-card-back.png");
 const _imports_1 = "" + __publicAssetsURL("bg-card-front.png");
 const _imports_2 = "" + __publicAssetsURL("card-logo.svg");
@@ -655,11 +677,18 @@ const _sfc_main$2 = {
   __name: "app",
   __ssrInlineRender: true,
   setup(__props) {
-    const data = useState("form");
+    useState("form");
     return (_ctx, _push, _parent, _attrs) => {
-      var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j;
-      const _component_BaseForm = __nuxt_component_0;
-      _push(`<main${ssrRenderAttrs(_attrs)} data-v-7ee2ee37><h1 class="visually-hidden" data-v-7ee2ee37>Credit card form</h1><section class="cards-section" data-v-7ee2ee37><div data-v-7ee2ee37><img${ssrRenderAttr("src", _imports_0)} alt="Card back" class="card__back" data-v-7ee2ee37><p class="card__data card__data--cvc" data-v-7ee2ee37>${ssrInterpolate(((_a = unref(data)) == null ? void 0 : _a.cvc) === "" ? "000" : (_b = unref(data)) == null ? void 0 : _b.cvc)}</p></div><div data-v-7ee2ee37><img${ssrRenderAttr("src", _imports_1)} alt="Card Front" class="card__front" data-v-7ee2ee37><div class="card__wrapper" data-v-7ee2ee37><img${ssrRenderAttr("src", _imports_2)} alt="Card logo" class="card__logo" data-v-7ee2ee37><div data-v-7ee2ee37><p class="card__data font-size-500" data-v-7ee2ee37>${ssrInterpolate(((_c = unref(data)) == null ? void 0 : _c.cardNumber) === "" ? "0000 0000 0000 0000" : (_d = unref(data)) == null ? void 0 : _d.cardNumber)}</p><div class="flex-row margin-block-start-300 justify-content-space-between" data-v-7ee2ee37><p class="card__data text-transform-uppercase" data-v-7ee2ee37>${ssrInterpolate(((_e = unref(data)) == null ? void 0 : _e.cardholderName) === "" ? "Jane Appleseed" : (_f = unref(data)) == null ? void 0 : _f.cardholderName)}</p><p class="card__data" data-v-7ee2ee37>${ssrInterpolate(((_g = unref(data)) == null ? void 0 : _g.month) === "" ? "00" : (_h = unref(data)) == null ? void 0 : _h.month)}/${ssrInterpolate(((_i = unref(data)) == null ? void 0 : _i.year) === "" ? "00" : (_j = unref(data)) == null ? void 0 : _j.year)}</p></div></div></div></div></section><section class="form-section" data-v-7ee2ee37>`);
+      const _component_client_only = __nuxt_component_0;
+      const _component_BaseForm = __nuxt_component_1;
+      _push(`<main${ssrRenderAttrs(_attrs)} data-v-00600aa1><h1 class="visually-hidden" data-v-00600aa1>Credit card form</h1><section class="cards-section" data-v-00600aa1><div data-v-00600aa1><img${ssrRenderAttr("src", _imports_0)} alt="Card back" class="card__back" data-v-00600aa1>`);
+      _push(ssrRenderComponent(_component_client_only, null, {}, _parent));
+      _push(`</div><div data-v-00600aa1><img${ssrRenderAttr("src", _imports_1)} alt="Card Front" class="card__front" data-v-00600aa1><div class="card__wrapper" data-v-00600aa1><img${ssrRenderAttr("src", _imports_2)} alt="Card logo" class="card__logo" data-v-00600aa1><div data-v-00600aa1>`);
+      _push(ssrRenderComponent(_component_client_only, null, {}, _parent));
+      _push(`<div class="flex-row margin-block-start-300 justify-content-space-between" data-v-00600aa1>`);
+      _push(ssrRenderComponent(_component_client_only, null, {}, _parent));
+      _push(ssrRenderComponent(_component_client_only, null, {}, _parent));
+      _push(`</div></div></div></div></section><section class="form-section" data-v-00600aa1>`);
       _push(ssrRenderComponent(_component_BaseForm, null, null, _parent));
       _push(`</section></main>`);
     };
@@ -671,7 +700,7 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("app.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const AppComponent = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-7ee2ee37"]]);
+const AppComponent = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-00600aa1"]]);
 const _sfc_main$1 = {
   __name: "nuxt-error-page",
   __ssrInlineRender: true,

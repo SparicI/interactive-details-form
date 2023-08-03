@@ -8,7 +8,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.517c5895.js",
+    "file": "error-404.7435bf90.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -28,7 +28,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.e485a183.js",
+    "file": "error-500.2dc1774b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -41,26 +41,26 @@ const client_manifest = {
   },
   "node_modules/nuxt/dist/app/entry.css": {
     "resourceType": "style",
-    "file": "entry.ad0fd784.css",
+    "file": "entry.e1befc18.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   },
   "node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "css": [
-      "entry.ad0fd784.css"
+      "entry.e1befc18.css"
     ],
     "dynamicImports": [
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.1d7b074e.js",
+    "file": "entry.0ed35dbb.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
   },
-  "entry.ad0fd784.css": {
-    "file": "entry.ad0fd784.css",
+  "entry.e1befc18.css": {
+    "file": "entry.e1befc18.css",
     "resourceType": "style"
   }
 };

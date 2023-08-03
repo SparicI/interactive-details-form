@@ -9,7 +9,9 @@
           class="card__back"
         >
 
-        <p class="card__data card__data--cvc">{{ data?.cvc === '' ? '000' : data?.cvc }}</p>
+        <client-only>
+          <p class="card__data card__data--cvc">{{ data?.cvc === '' ? '000' : data?.cvc }}</p>
+        </client-only>
 
       </div>
 
@@ -26,15 +28,21 @@
             class="card__logo"
           >
           <div>
-            <p class="card__data font-size-500">{{ data?.cardNumber === '' ? '0000 0000 0000 0000' : data?.cardNumber }}
-            </p>
+            <client-only>
+              <p class="card__data font-size-500">{{ data?.cardNumber === '' ? '0000 0000 0000 0000' : data?.cardNumber }}
+              </p>
+            </client-only>
             <div class="flex-row margin-block-start-300 justify-content-space-between">
-              <p class="card__data text-transform-uppercase">{{ data?.cardholderName === '' ? 'Jane Appleseed'
-                :
-                data?.cardholderName }}</p>
-              <p class="card__data">{{ data?.month === '' ? '00' : data?.month }}/{{ data?.year === '' ? '00'
-                : data?.year
-              }}</p>
+              <client-only>
+                <p class="card__data text-transform-uppercase">{{ data?.cardholderName === '' ? 'Jane Appleseed'
+                  :
+                  data?.cardholderName }}</p>
+              </client-only>
+              <client-only>
+                <p class="card__data">{{ data?.month === '' ? '00' : data?.month }}/{{ data?.year === '' ? '00'
+                  : data?.year
+                }}</p>
+              </client-only>
             </div>
 
           </div>
