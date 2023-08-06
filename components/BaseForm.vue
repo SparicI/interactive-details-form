@@ -110,7 +110,7 @@ const form = useState('form', () => ({
 }
 
 .form__label {
-    font-size: 12px;
+    font-size: var(--font-size-200);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -123,9 +123,9 @@ const form = useState('form', () => ({
 }
 
 .form__input::placeholder {
-    font-size: 18px;
+    font-size: var(--font-size-400);
     color: var(--dark-grayish-violet);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     opacity: 0.37;
 }
 
@@ -138,13 +138,10 @@ const form = useState('form', () => ({
     color: var(--white);
 }
 
-@media (min-width: 600px) {
-    .form__label {
-        font-size: var(--font-size-300);
-    }
+@media (min-width: 1024px) {
 
     .form__input::placeholder {
-        font-size: 22px;
+        font-size: var(--font-size-600);
     }
 }
 </style>

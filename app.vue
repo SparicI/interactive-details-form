@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="grid-container">
     <h1 class="visually-hidden">Credit card form</h1>
     <section class="cards-section">
       <div>
@@ -29,7 +29,8 @@
           >
           <div>
             <client-only>
-              <p class="card__data font-size-500">{{ data?.cardNumber === '' ? '0000 0000 0000 0000' : data?.cardNumber }}
+              <p class="card__data card__data--large">{{ data?.cardNumber === '' ? '0000 0000 0000 0000' :
+                data?.cardNumber }}
               </p>
             </client-only>
             <div class="flex-row margin-block-start-300 justify-content-space-between">
@@ -65,8 +66,12 @@ const data = useState('form')
 </script>
 
 <style scoped>
+.grid-container {
+  display: grid;
+  grid-template-rows: 235px 1fr;
+}
+
 .cards-section {
-  min-height: 235px;
   position: relative;
 
   background-image: url('/bg-main-mobile.png');
@@ -78,7 +83,7 @@ const data = useState('form')
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: 5.5rem 1rem;
+  padding-block: 5.5rem var(--spacing-400);
 }
 
 .card__back,
@@ -89,19 +94,23 @@ const data = useState('form')
 }
 
 .card__back {
-  top: 2rem;
-  right: 1rem;
+  top: var(--spacing-800);
+  right: var(--spacing-400);
 }
 
 .card__front {
   top: 7.65rem;
-  left: 1rem;
+  left: var(--spacing-400);
 }
 
 .card__data {
   color: var(--white);
   font-size: var(--font-size-100);
   letter-spacing: 1.5px;
+}
+
+.card__data--large {
+  font-size: var(--font-size-500);
 }
 
 .card__logo {
@@ -114,7 +123,8 @@ const data = useState('form')
   left: 33px;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  justify-content: space-between;
+  gap: var(--spacing-900);
 }
 
 .card__data--cvc {
@@ -123,10 +133,12 @@ const data = useState('form')
   right: 50px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
 
-  main {
-    flex-direction: row;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    grid-template-rows: auto;
   }
 
   .cards-section {
@@ -136,9 +148,51 @@ const data = useState('form')
 
 
   .card__back,
-  .card__front {
+  .card__front,
+  .card__wrapper {
     width: 445px;
     height: 245px;
+  }
+
+  .card__front,
+  .card__wrapper {
+    left: 130px;
+    top: 50%;
+    transform: translateY(-100%);
+  }
+
+  .card__back {
+    top: 50%;
+    transform: translateY(10%);
+    left: 200px;
+    right: auto;
+  }
+
+  .card__wrapper {
+    padding-block: var(--spacing-700);
+    padding-inline: var(--spacing-800);
+  }
+
+  .card__data {
+    font-size: var(--font-size-400);
+  }
+
+  .card__data--large {
+    font-size: var(--font-size-1000);
+  }
+
+  .card__logo {
+    width: 75px;
+  }
+
+  .form-section {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-section {
+    padding-inline-end: 20%;
   }
 }
 </style>

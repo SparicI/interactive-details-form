@@ -1,8 +1,18 @@
 body {
     font-size: var(--font-size-400);
     font-family: var(--font-family);
-    font-weight: var(--font-weight-400);
+    font-weight: var(--font-weight-normal);
     background-color: var(--white);
+}
+
+@supports(height: 100dvh) {
+    main {
+        height: 100dvh;
+    }
+}
+
+main {
+    height: 100vh;
 }
 
 .flex-row {

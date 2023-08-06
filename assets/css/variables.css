@@ -18,13 +18,17 @@
 
     /* Typography */
     --font-size-100: 10px;
+    --font-size-200: 12px;
     --font-size-300: 16px;
     --font-size-400: 18px;
     --font-size-500: 20px;
+    --font-size-600: 22px;
+    --font-size-1000: 30px;
 
     --font-family: 'Space Grotesk', sans-serif;
 
-    --font-weight-400: 500;
+    --font-weight-normal: 500;
+    --font-weight-bold: 700;
 
     --line-height-heading: 1.1;
     --line-height-base: 1.5;
@@ -36,6 +40,9 @@
     --spacing-400: 1rem;
     --spacing-500: 1.25rem;
     --spacing-600: 1.5rem;
+    --spacing-700: 1.75rem;
+    --spacing-800: 2rem;
+    --spacing-900: 2.5rem;
 
     /* Other */
     --border-radius-soft: 10px;
