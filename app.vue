@@ -10,7 +10,9 @@
         >
 
         <client-only>
-          <p class="card__data card__data--cvc">{{ data?.cvc === '' ? '000' : data?.cvc }}</p>
+          <div class="card__wrapper card__wrapper--back">
+            <p class="card__data">{{ data?.cvc === '' ? '000' : data?.cvc }}</p>
+          </div>
         </client-only>
 
       </div>
@@ -21,7 +23,7 @@
           alt="Card Front"
           class="card__front"
         >
-        <div class="card__wrapper">
+        <div class="card__wrapper card__wrapper--front">
           <img
             src="/card-logo.svg"
             alt="Card logo"
@@ -87,20 +89,38 @@ const data = useState('form')
 }
 
 .card__back,
-.card__front {
+.card__front,
+.card__wrapper {
   position: fixed;
   width: 285px;
   height: 160px;
 }
 
-.card__back {
-  top: var(--spacing-800);
-  right: var(--spacing-400);
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-400);
 }
 
-.card__front {
+.card__wrapper--back {
+  justify-content: center;
+  align-items: flex-end;
+  padding-inline-end: var(--spacing-900);
+}
+
+.card__back,
+.card__wrapper--back {
+  top: var(--spacing-800);
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.card__front,
+.card__wrapper--front {
   top: 7.65rem;
-  left: var(--spacing-400);
+  left: 50%;
+  transform: translateX(-70%);
 }
 
 .card__data {
@@ -117,21 +137,9 @@ const data = useState('form')
   width: 50px;
 }
 
-.card__wrapper {
-  position: fixed;
-  top: 137px;
-  left: 33px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--spacing-900);
-}
 
-.card__data--cvc {
-  position: fixed;
-  top: 103px;
-  right: 50px;
-}
+
+
 
 @media (min-width: 1024px) {
 
@@ -152,16 +160,18 @@ const data = useState('form')
   .card__wrapper {
     width: 445px;
     height: 245px;
+
   }
 
   .card__front,
-  .card__wrapper {
+  .card__wrapper--front {
     left: 130px;
     top: 50%;
     transform: translateY(-100%);
   }
 
-  .card__back {
+  .card__back,
+  .card__wrapper--back {
     top: 50%;
     transform: translateY(10%);
     left: 200px;
@@ -171,6 +181,10 @@ const data = useState('form')
   .card__wrapper {
     padding-block: var(--spacing-700);
     padding-inline: var(--spacing-800);
+  }
+
+  .card__wrapper--back {
+    padding-inline-end: var(--spacing-1000);
   }
 
   .card__data {
