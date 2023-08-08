@@ -5,6 +5,12 @@ body {
     background-color: var(--white);
 }
 
+input,
+button {
+    cursor: pointer;
+}
+
+
 @supports(height: 100dvh) {
     main {
         height: 100dvh;

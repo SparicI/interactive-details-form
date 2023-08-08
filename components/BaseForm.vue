@@ -122,6 +122,12 @@ const form = useState('form', () => ({
     width: 100%;
 }
 
+.form__input:focus,
+.form__input:active {
+    outline: none;
+    border: 1.4px solid var(--active-input-border);
+}
+
 .form__input::placeholder {
     font-size: var(--font-size-400);
     color: var(--dark-grayish-violet);
@@ -136,6 +142,10 @@ const form = useState('form', () => ({
 
     background-color: var(--very-dark-violet);
     color: var(--white);
+}
+
+.form__button:hover {
+    background-color: var(--very-dark-violet-hover);
 }
 
 @media (min-width: 1024px) {
