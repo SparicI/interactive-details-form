@@ -13,6 +13,7 @@
             <input
                 id="cardholderName"
                 class="form__input"
+                :class="{ error: emptyFieldErrors.includes('cardholderName') }"
                 type="text"
                 name="cardholderName"
                 v-model="form.cardholderName"
@@ -35,6 +36,7 @@
             <input
                 id="cardNumber"
                 class="form__input"
+                :class="{ error: emptyFieldErrors.includes('cardNumber') || formErrors.cardNumber }"
                 type="text"
                 name="cardNumber"
                 v-model="form.cardNumber"
@@ -61,6 +63,7 @@
                     <input
                         id="month"
                         class="form__input"
+                        :class="{ error: emptyFieldErrors.includes('month') || formErrors.month }"
                         type="text"
                         name="month"
                         v-model="form.month"
@@ -72,6 +75,7 @@
                     <input
                         id="year"
                         class="form__input"
+                        :class="{ error: emptyFieldErrors.includes('year') || formErrors.year }"
                         type="text"
                         name="year"
                         v-model="form.year"
@@ -98,6 +102,7 @@
                 <input
                     id="cvc"
                     class="form__input"
+                    :class="{ error: emptyFieldErrors.includes('cvc') || formErrors.cvc }"
                     type="text"
                     name="cvc"
                     v-model="form.cvc"
@@ -190,6 +195,10 @@ const submitForm = () => {
     border: 1.4px solid var(--light-grayish-violet);
     border-radius: var(--border-radius-soft);
     width: 100%;
+}
+
+.form__input.error {
+    border: 1.4px solid var(--input-errors)
 }
 
 .form__input:focus,
