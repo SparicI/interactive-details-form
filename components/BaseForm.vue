@@ -1,6 +1,6 @@
 <template>
     <form
-        @submit.prevent="submit"
+        @submit.prevent="submitForm"
         class="form flex-column"
     >
         <div class="form__group flex-column">
@@ -17,7 +17,12 @@
                 name="cardholderName"
                 v-model="form.cardholderName"
                 placeholder=" e.g. Jane Appleseed"
+                required
+                @invalid.prevent="validateField('cardholderName')"
             />
+            <div class="error-message">
+                <p v-if="emptyFieldErrors.includes('cardholderName')">Can't be blank</p>
+            </div>
         </div>
 
         <div class="form__group flex-column">
@@ -34,7 +39,14 @@
                 name="cardNumber"
                 v-model="form.cardNumber"
                 placeholder="e.g. 1234 5678 9123 0000"
+                required
+                pattern="[0-9 ]+"
+                @invalid.prevent="validateField('cardNumber')"
             />
+            <div class="error-message">
+                <p v-if="emptyFieldErrors.includes('cardNumber')">Can't be blank</p>
+                <p v-if="formErrors.cardNumber">Wrong format, numbers only</p>
+            </div>
         </div>
 
         <div class="flex-row">
@@ -53,6 +65,9 @@
                         name="month"
                         v-model="form.month"
                         placeholder="MM"
+                        required
+                        pattern="\d{2}"
+                        @invalid.prevent="validateField('month')"
                     />
                     <input
                         id="year"
@@ -61,7 +76,15 @@
                         name="year"
                         v-model="form.year"
                         placeholder="YY"
+                        required
+                        pattern="\d{2}"
+                        @invalid.prevent="validateField('year')"
                     />
+                </div>
+                <div class="error-message">
+                    <p v-if="emptyFieldErrors.includes('month') || emptyFieldErrors.includes('year')">Can't be blank</p>
+                    <p v-if="formErrors.month || formErrors.year">Wrong format, two numbers only</p>
+
                 </div>
             </div>
 
@@ -75,11 +98,18 @@
                 <input
                     id="cvc"
                     class="form__input"
-                    type="number"
+                    type="text"
                     name="cvc"
                     v-model="form.cvc"
                     placeholder="e.g. 123"
+                    required
+                    pattern="\d{3}"
+                    @invalid.prevent="validateField('cvc')"
                 />
+                <div class="error-message">
+                    <p v-if="emptyFieldErrors.includes('cvc')">Can't be blank</p>
+                    <p v-if="formErrors.cvc">Wrong format, three numbers only</p>
+                </div>
             </div>
         </div>
 
@@ -99,6 +129,46 @@ const form = useState('form', () => ({
     year: '',
     cvc: ''
 }))
+
+let emptyFieldErrors = ref([])
+
+let formErrors = ref({
+    cardholderName: false,
+    cardNumber: false,
+    month: false,
+    year: false,
+    cvc: false
+})
+
+const validateField = (fieldName) => {
+    if (form.value[fieldName] === '') {
+        // console.log("Empty field", fieldName)
+        emptyFieldErrors.value.push(fieldName)
+    } else {
+        // console.log("Format error", fieldName)
+        formErrors.value[fieldName] = true
+    }
+}
+
+const resetFormErrors = () => {
+    formErrors.value.cardholderName = false
+    formErrors.value.cardNumber = false
+    formErrors.value.month = false
+    formErrors.value.year = false
+    formErrors.value.cvc = false
+}
+
+watch(form.value, (newForm) => {
+    emptyFieldErrors.value = []
+    resetFormErrors()
+})
+
+const submitForm = () => {
+    emptyFieldErrors.value = []
+    resetFormErrors()
+
+    console.log("Form submitted")
+}
 
 
 </script>
@@ -140,12 +210,18 @@ const form = useState('form', () => ({
     padding: var(--spacing-300);
     border-radius: var(--border-radius-soft);
 
+    border: 1px solid var(--very-dark-violet);
     background-color: var(--very-dark-violet);
     color: var(--white);
 }
 
 .form__button:hover {
     background-color: var(--very-dark-violet-hover);
+}
+
+.error-message {
+    color: var(--input-errors);
+    font-size: var(--font-size-100);
 }
 
 @media (min-width: 1024px) {

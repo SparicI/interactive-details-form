@@ -9,7 +9,7 @@
     /* hsl(249, 99%, 64%) */
 
     /* input errors */
-    --primary-red: hsl(0, 100%, 66%);
+    --input-errors: hsl(0, 100%, 66%);
 
     /* Neutral */
     --white: hsl(0, 0%, 100%);
