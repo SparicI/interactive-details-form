@@ -118,10 +118,8 @@
             </div>
         </div>
 
-        <button
-            type="submit"
-            class="form__button"
-        >Confirm</button>
+        <BaseButton button-type="submit">Confirm</BaseButton>
+
     </form>
 </template>
 
@@ -215,19 +213,6 @@ const submitForm = () => {
     opacity: 0.37;
 }
 
-.form__button {
-    margin-block-start: var(--spacing-400);
-    padding: var(--spacing-300);
-    border-radius: var(--border-radius-soft);
-
-    border: 1px solid var(--very-dark-violet);
-    background-color: var(--very-dark-violet);
-    color: var(--white);
-}
-
-.form__button:hover {
-    background-color: var(--very-dark-violet-hover);
-}
 
 .error-message {
     color: var(--input-errors);
@@ -235,7 +220,6 @@ const submitForm = () => {
 }
 
 @media (min-width: 1024px) {
-
     .form__input::placeholder {
         font-size: var(--font-size-600);
     }

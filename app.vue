@@ -56,7 +56,7 @@
 
     </section>
     <section class="form-section">
-      <BaseForm @submit-form="completed" />
+      <BaseForm />
       <FormCompletedMessage />
     </section>
   </main>
@@ -86,6 +86,7 @@ const data = useState('form')
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding-block: 5.5rem var(--spacing-400);
 }
 

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="completed">
         <img
             src="/icon-complete.svg"
             alt="Form completed"
@@ -8,10 +8,7 @@
         <h2 class="completed__heading">Thank you!</h2>
         <p class="completed__description">We've added your card details</p>
 
-        <button
-            type="button"
-            class="form__button"
-        >Continue</button>
+        <BaseButton button-type="button">Continue</BaseButton>
     </div>
 </template>
 
@@ -21,4 +18,13 @@
 
 
 </script>
-<style scoped></style>
+<style scoped>
+.completed {
+    width: min(400px, 100%);
+    text-align: center;
+}
+
+.completed>* {
+    margin-block-end: 2rem;
+}
+</style>
