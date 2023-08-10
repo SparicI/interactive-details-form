@@ -56,7 +56,8 @@
 
     </section>
     <section class="form-section">
-      <BaseForm />
+      <BaseForm @submit-form="completed" />
+      <FormCompletedMessage />
     </section>
   </main>
 </template>
