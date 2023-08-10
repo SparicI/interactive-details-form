@@ -15,6 +15,10 @@
     margin-block-start: var(--spacing-300);
 }
 
+.margin-block-end-300 {
+    margin-block-end: var(--spacing-300);
+}
+
 .text-transform-uppercase {
     text-transform: uppercase;
 }

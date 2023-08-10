@@ -134,8 +134,12 @@ const form = useState('form', () => ({
     cvc: ''
 }))
 
+const formCompleted = useState('formCompleted', () => false)
+
+// Empty input fields errors
 let emptyFieldErrors = ref([])
 
+// Format input fields errors
 let formErrors = ref({
     cardholderName: false,
     cardNumber: false,
@@ -144,7 +148,9 @@ let formErrors = ref({
     cvc: false
 })
 
+// Event listener for invalid events on form input fields
 const validateField = (fieldName) => {
+
     if (form.value[fieldName] === '') {
         // console.log("Empty field", fieldName)
         emptyFieldErrors.value.push(fieldName)
@@ -163,15 +169,20 @@ const resetFormErrors = () => {
 }
 
 watch(form.value, (newForm) => {
+    // Reset empty field and format errors
     emptyFieldErrors.value = []
     resetFormErrors()
 })
 
 const submitForm = () => {
+
+    // Reset empty field and format errors
     emptyFieldErrors.value = []
     resetFormErrors()
 
-    console.log("Form submitted")
+    // When formCompleted composable is set to TRUE FormCompletedMessage component renders
+    formCompleted.value = true
+
 }
 
 

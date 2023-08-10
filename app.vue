@@ -56,8 +56,8 @@
 
     </section>
     <section class="form-section">
-      <BaseForm />
-      <FormCompletedMessage />
+      <FormCompletedMessage v-if="formCompleted" />
+      <BaseForm v-else />
     </section>
   </main>
 </template>
@@ -65,6 +65,7 @@
 <script setup>
 
 const data = useState('form')
+const formCompleted = useState('formCompleted')
 
 </script>
 
