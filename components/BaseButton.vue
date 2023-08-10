@@ -24,7 +24,7 @@ defineProps({
 .form__button {
     margin-block-start: var(--spacing-400);
     padding: var(--spacing-300);
-    width: min(380px, 100%);
+    width: 100%;
 
     border-radius: var(--border-radius-soft);
     border: 1px solid var(--very-dark-violet);

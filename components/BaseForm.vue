@@ -191,7 +191,6 @@ const submitForm = () => {
 .form {
     max-width: 400px;
     gap: var(--spacing-400);
-    padding-inline: var(--spacing-600);
 }
 
 .form__label {

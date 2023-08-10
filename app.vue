@@ -56,8 +56,8 @@
 
     </section>
     <section class="form-section">
-      <FormCompletedMessage v-if="formCompleted" />
-      <BaseForm v-else />
+      <BaseForm v-if="!formCompleted" />
+      <FormCompletedMessage v-else />
     </section>
   </main>
 </template>
@@ -89,6 +89,7 @@ const formCompleted = useState('formCompleted')
   justify-content: center;
 
   padding-block: 5.5rem var(--spacing-400);
+  padding-inline: var(--spacing-300);
 }
 
 .card__back,
@@ -123,7 +124,7 @@ const formCompleted = useState('formCompleted')
 .card__wrapper--front {
   top: 7.65rem;
   left: 50%;
-  transform: translateX(-70%);
+  transform: translateX(-50%);
 }
 
 .card__data {
@@ -140,7 +141,14 @@ const formCompleted = useState('formCompleted')
   width: 50px;
 }
 
+@media (min-width: 375px) {
 
+  .card__front,
+  .card__wrapper--front {
+    left: 50%;
+    transform: translateX(-70%);
+  }
+}
 
 
 
