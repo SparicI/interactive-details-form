@@ -7,83 +7,84 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "skipLibCheck": true,
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
     "strict": true,
     "allowJs": true,
-    "baseUrl": "/Users/ivana/projects/fem/interactive-details-form",
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "node"
-    ],
     "paths": {
       "~": [
-        "/Users/ivana/projects/fem/interactive-details-form"
+        ".."
       ],
       "~/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/*"
+        "../*"
       ],
       "@": [
-        "/Users/ivana/projects/fem/interactive-details-form"
+        ".."
       ],
       "@/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/*"
+        "../*"
       ],
       "~~": [
-        "/Users/ivana/projects/fem/interactive-details-form"
+        ".."
       ],
       "~~/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/*"
+        "../*"
       ],
       "@@": [
-        "/Users/ivana/projects/fem/interactive-details-form"
+        ".."
       ],
       "@@/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/*"
+        "../*"
       ],
       "assets": [
-        "/Users/ivana/projects/fem/interactive-details-form/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/ivana/projects/fem/interactive-details-form/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/public/*"
+        "../public/*"
       ],
       "#app": [
-        "/Users/ivana/projects/fem/interactive-details-form/node_modules/nuxt/dist/app"
+        "../node_modules/nuxt/dist/app"
       ],
       "#app/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/node_modules/nuxt/dist/app/*"
+        "../node_modules/nuxt/dist/app/*"
       ],
       "vue-demi": [
-        "/Users/ivana/projects/fem/interactive-details-form/node_modules/nuxt/dist/app/compat/vue-demi"
+        "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
       "#vue-router": [
-        "/Users/ivana/projects/fem/interactive-details-form/.nuxt/vue-router"
+        "./vue-router"
       ],
       "#imports": [
-        "/Users/ivana/projects/fem/interactive-details-form/.nuxt/imports"
+        "./imports"
       ],
       "#build": [
-        "/Users/ivana/projects/fem/interactive-details-form/.nuxt"
+        "."
       ],
       "#build/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/.nuxt/*"
+        "./*"
       ],
       "#components": [
-        "/Users/ivana/projects/fem/interactive-details-form/.nuxt/components"
+        "./components"
       ]
     }
   },
   "include": [
     "./nuxt.d.ts",
-    "../**/*"
+    "../**/*",
+    ".."
   ],
   "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
     "../dist",
     "../.output"
   ]

@@ -54,10 +54,16 @@
         <div class="flex-row">
             <div class="form__group flex-column width-50">
                 <label
-                    for="number"
+                    for="month"
                     class="form__label"
                 >
                     Exp. date (mm/yy)
+                </label>
+                <label
+                    for="year"
+                    class="visually-hidden"
+                >
+                    Year
                 </label>
                 <div class="flex-row">
                     <input

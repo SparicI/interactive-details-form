@@ -8,57 +8,63 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "paths": {
       "#imports": [
-        "/Users/ivana/projects/fem/interactive-details-form/.nuxt/types/nitro-imports"
+        "./types/nitro-imports"
       ],
       "#paths": [
-        "/Users/ivana/projects/fem/interactive-details-form/node_modules/nuxt/dist/core/runtime/nitro/paths"
+        "../node_modules/nuxt/dist/core/runtime/nitro/paths"
       ],
       "~": [
-        "/Users/ivana/projects/fem/interactive-details-form"
+        "./.."
       ],
       "~/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/*"
+        "../*"
       ],
       "@": [
-        "/Users/ivana/projects/fem/interactive-details-form"
+        "./.."
       ],
       "@/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/*"
+        "../*"
       ],
       "~~": [
-        "/Users/ivana/projects/fem/interactive-details-form"
+        "./.."
       ],
       "~~/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/*"
+        "../*"
       ],
       "@@": [
-        "/Users/ivana/projects/fem/interactive-details-form"
+        "./.."
       ],
       "@@/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/*"
+        "../*"
       ],
       "assets": [
-        "/Users/ivana/projects/fem/interactive-details-form/assets"
+        "../assets"
       ],
       "assets/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/assets/*"
+        "../assets/*"
       ],
       "public": [
-        "/Users/ivana/projects/fem/interactive-details-form/public"
+        "../public"
       ],
       "public/*": [
-        "/Users/ivana/projects/fem/interactive-details-form/public/*"
+        "../public/*"
       ]
     }
   },
   "include": [
-    "/Users/ivana/projects/fem/interactive-details-form/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro-nuxt.d.ts",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../node_modules/nuxt/node_modules",
+    "../dist"
   ]
 }

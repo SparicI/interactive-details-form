@@ -1,7 +1,7 @@
 <template>
   <main class="grid-container">
     <h1 class="visually-hidden">Credit card form</h1>
-    <section class="cards-section">
+    <div class="cards-section">
       <div>
         <img
           src="/bg-card-back.png"
@@ -54,11 +54,11 @@
       </div>
 
 
-    </section>
-    <section class="form-section">
+    </div>
+    <div class="form-section">
       <BaseForm v-if="!formCompleted" />
       <FormCompletedMessage v-else />
-    </section>
+    </div>
   </main>
 </template>
 
